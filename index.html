@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Score Counter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.9.0/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Literata" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>Score Counter</h1>
+
+      <h2><span id="p1">0</span> &nbsp; vs &nbsp; <span id="p2">0</span></h2>
+
+      <p>
+        Playing upto:
+        <input id="winningScore" class="winningScore" type="number" value="5" />
+      </p>
+
+      <br />
+      <br />
+
+      <button id="p1" class="btn btn-player">Player One +1</button>
+      <button id="p2" class="btn btn-player">Player Two +1</button>
+
+      <br />
+      <br />
+
+      <button id="reset" class="btn btn-reset">
+        <i class="fas fa-sync-alt"></i>&nbsp;Reset
+      </button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+* {
+  font-family: Literata;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f8f3d4;
+  color: #333;
+}
+
+h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 3.5rem;
+}
+
+h2 span {
+  display: inline-block;
+  font-size: 2.5em;
+  padding: 1rem;
+  position: relative;
+}
+
+h2 span::after {
+  content: 'Winner!';
+  font-size: 0.14em;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 120ms ease-in;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+.app {
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.winner {
+  color: #00b8a9;
+}
+
+.winner::after {
+  opacity: 1;
+}
+
+.winningScore {
+  background: #f8f3d4;
+  border: none;
+  border-bottom: 2px solid;
+  outline: none;
+  font-size: 1.6em;
+  text-align: center;
+  width: 3rem;
+  padding-left: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 15px 25px;
+  margin: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  user-select: none;
+  cursor: pointer;
+  transition: 180ms ease;
+  min-width: 210px;
+}
+
+.btn i {
+  font-size: 0.85em;
+}
+
+.btn-player {
+  color: #222;
+  background-color: #ffde7d;
+  box-shadow: 0 9px #d29d00;
+}
+
+.btn-player:hover {
+  background-color: #ffd55b;
+}
+
+.btn-player:active {
+  background-color: #ffd55b;
+  box-shadow: 0 5px #d29d00;
+  transform: translateY(4px);
+}
+
+.btn-player:disabled {
+  background-color: #ffe79f;
+  box-shadow: 0 9px #ffd14a;
+  cursor: not-allowed;
+}
+
+.btn-player:disabled:hover {
+  background-color: #ffe79f;
+}
+
+.btn-reset {
+  color: #fff;
+  background-color: #f6416c;
+  box-shadow: 0 9px #870625;
+}
+
+.btn-reset.animate {
+  animation: winner 500ms ease;
+}
+
+.btn-reset:hover {
+  background-color: #f42153;
+}
+
+.btn-reset:active {
+  background-color: #f42153;
+  box-shadow: 0 5px #870625;
+  transform: translateY(4px);
+}
+
+@keyframes winner {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+    padding: 10px 18px;
+    margin: 1rem;
+    border-radius: 10px;
+    min-width: 155px;
+  }
+
+  .btn-player {
+    box-shadow: 0 6px #d29d00;
+  }
+
+  .btn-player:active {
+    box-shadow: 0 4px #d29d00;
+  }
+
+  .btn-player:disabled {
+    box-shadow: 0 6px #ffd14a;
+  }
+
+  .btn-reset {
+    box-shadow: 0 6px #870625;
+  }
+
+  .btn-reset:active {
+    box-shadow: 0 4px #870625;
+  }
+}
