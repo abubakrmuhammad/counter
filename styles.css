@@ -45,7 +45,7 @@ h2 span::after {
   content: 'Winner!';
   font-size: 0.14em;
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
